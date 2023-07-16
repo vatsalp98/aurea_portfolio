@@ -1,9 +1,19 @@
-import Link from "next/link";
+import Image from "next/image";
 import Footer from "~/components/footer";
 import HeadMeta from "~/components/headMeta";
 import NavBar from "~/components/headerSite";
+import { Specialists } from "~/components/typing/specialists";
 
 export default function Home() {
+  const specialists = [
+    "an Engineer",
+    "an Artist",
+    "a Base Player",
+    "a Gamer",
+    "a Tatoo artist",
+    "an Animal Lover",
+  ];
+
   return (
     <>
       <HeadMeta
@@ -11,37 +21,46 @@ export default function Home() {
         description="Aurea Gutierrez, curious and creative to the core. Hopefully you like my projects."
       />
       <NavBar />
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-gradStart to-gradEnd dark:from-gradDarkStart dark:to-gradDarkEnd">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-          </h1>
-          <div className="grid grid-cols-1 gap-4 md:gap-8 sm:grid-cols-2">
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-              href="https://create.t3.gg/en/usage/first-steps"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">First Steps →</h3>
-              <div className="text-lg">
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
+      <div className="z-0 inline-block bg-white px-32 py-8 dark:bg-dark xl:p-24 lg:p-16 md:p-12 sm:p-8">
+        <main className="flex min-h-screen flex-col items-center justify-center md:pt-16 sm:pt-8">
+          <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
+            <div className="flex w-full items-center justify-between lg:flex-col">
+              <div className="w-1/2 pr-10 md:w-full">
+                <Image
+                  src="/projects.svg"
+                  alt="Profile Picture"
+                  width={550}
+                  height={550}
+                  className="h-auto w-full lg:hidden md:inline-block md:w-full"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 50vw"
+                />
               </div>
-            </Link>
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-              href="https://create.t3.gg/en/introduction"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">Documentation →</h3>
-              <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
+              <div className="flex w-1/2 flex-col items-center self-center pl-10 lg:w-full lg:text-center">
+                <div
+                  className={
+                    "mx-2 my-2 !text-left !text-6xl text-dark dark:text-light xl:!text-5xl lg:!text-center lg:!text-5xl md:!text-4xl sm:!text-3xl"
+                  }
+                >
+                  Engineering the future, one ingenious design at a time.
+                </div>
+                <Specialists
+                  specialists={specialists}
+                  className={
+                    "mx-auto w-full !text-left !text-4xl font-bold text-dark dark:text-light lg:!text-center"
+                  }
+                />
+                <p className="pl-2 text-lg text-dark dark:text-light md:text-sm xs:text-xs">
+                  I’m focused on building responsive web and mobile applications
+                  while focusing on serverless back-end technologies. I am
+                  currently developing an application to help developing
+                  countries improve their health services.
+                </p>
               </div>
-            </Link>
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
       <Footer />
     </>
   );

@@ -11,6 +11,10 @@ export const env = createEnv({
     APPWRITE_ENDPOINT: z.string(),
     PROJECT_ID: z.string(),
     APPWRITE_KEY: z.string(),
+    DB_ID: z.string(),
+    PROJECTS_COLLECTION_ID: z.string(),
+    EXPERIENCES_COLLECTION_ID: z.string(),
+    EDUCATIONS_COLLECTION_ID: z.string(),
   },
 
   /**
@@ -31,6 +35,10 @@ export const env = createEnv({
     APPWRITE_ENDPOINT: process.env.APPWRITE_ENDPOINT,
     PROJECT_ID: process.env.PROJECT_ID,
     APPWRITE_KEY: process.env.APPWRITE_KEY,
+    DB_ID: process.env.DB_ID,
+    PROJECTS_COLLECTION_ID: process.env.PROJECTS_COLLECTION_ID,
+    EXPERIENCES_COLLECTION_ID: process.env.EXPERIENCES_COLLECTION_ID,
+    EDUCATIONS_COLLECTION_ID: process.env.EDUCATIONS_COLLECTION_ID,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

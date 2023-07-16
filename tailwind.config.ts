@@ -5,6 +5,12 @@ export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      boxShadow: {
+        primary:
+          "0 0 5px theme('colors.light'), 0 0 20px theme('colors.primary')",
+        customBlue:
+          "0 0 5px theme('colors.blue.500'), 0 0 20px theme('colors.blue.400')",
+      },
       colors: {
         dark: "#18191A",
         light: "#F3F2F2",

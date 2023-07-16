@@ -18,6 +18,9 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    domains: ["cloud.appwrite.io"],
+  },
 };
 
 export default config;
