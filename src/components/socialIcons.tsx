@@ -13,7 +13,7 @@ export default function DesktopSocials() {
         className="mr-3 w-6"
         title="twitter"
       >
-        <CgTwitter className="text-[28px] text-dark dark:text-light" />
+        <CgTwitter className="text-[28px] text-primary dark:text-light" />
       </motion.a>
       <motion.a
         href="https://www.linkedin.com/in/vatsalparmar98/"
@@ -22,7 +22,7 @@ export default function DesktopSocials() {
         whileTap={{ scale: 0.9 }}
         className="mx-3"
       >
-        <TfiLinkedin className="text-[28px] text-dark dark:text-light" />
+        <TfiLinkedin className="text-[28px] text-primary dark:text-light" />
       </motion.a>
     </>
   );

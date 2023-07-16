@@ -3,12 +3,12 @@ import Footer from "~/components/footer";
 import HeadMeta from "~/components/headMeta";
 import NavBar from "~/components/headerSite";
 
-export default function Home() {
+export default function ProjectsPage() {
   return (
     <>
       <HeadMeta
-        title="Aurea | Home"
-        description="Aurea Gutierrez, curious and creative to the core. Hopefully you like my projects."
+        title="Aurea | Projects"
+        description="Quick glance into my projects"
       />
       <NavBar />
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-gradStart to-gradEnd dark:from-gradDarkStart dark:to-gradDarkEnd">

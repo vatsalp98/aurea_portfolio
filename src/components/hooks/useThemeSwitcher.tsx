@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 export default function useThemeSwitcher() {
-  const preferDarkQuery = "(prefers-color-scheme: dark)"; // changed typo in media query string
-  const [darkMode, setDarkMode] = useState("");
+  const preferDarkQuery = "(prefers-color-scheme: light)"; // changed typo in media query string
+  const [darkMode, setDarkMode] = useState("light");
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);

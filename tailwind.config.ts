@@ -11,6 +11,11 @@ export default {
         cardDark: "#242526",
         hoverDark: "#3A3B3C",
         secondaryTextDark: "#B0B3B8",
+        gradDarkStart: "#414141",
+        gradDarkEnd: "#000000",
+        gradStart: "#864BA2",
+        gradEnd: "#BF3A30",
+        primary: "#5F0A87",
       },
     },
     screens: {

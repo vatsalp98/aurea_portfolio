@@ -22,11 +22,11 @@ const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
   return (
     <Link
       href={href}
-      className={`${className} group relative font-semibold text-dark dark:text-light`}
+      className={`${className} group relative font-semibold text-primary dark:text-light`}
     >
       {title}
       <span
-        className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-dark transition-[width] duration-300 group-hover:w-full dark:bg-light ${
+        className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-dark text-primary transition-[width] duration-300 group-hover:w-full dark:bg-light dark:text-light ${
           pathName === href ? "w-full" : "w-0"
         }
             `}
@@ -46,7 +46,7 @@ export default function NavBar() {
   };
 
   return (
-    <header className="relative z-10 flex w-full items-center justify-between bg-light px-32 py-8 font-medium dark:bg-dark lg:px-16 sm:px-12 xs:px-8">
+    <header className="relative z-10 flex w-full items-center justify-between bg-gradStart px-32 py-8 font-medium dark:bg-gradDarkStart lg:px-16 sm:px-12 xs:px-8">
       <HamburgerMenu
         open={open}
         className={"hidden flex-col items-center justify-center lg:flex"}
@@ -73,9 +73,9 @@ export default function NavBar() {
             className="mx-3 mt-1 text-light"
           >
             {darkMode === "light" ? (
-              <BsMoonFill className="text-2xl text-dark dark:text-light" />
+              <BsMoonFill className="text-2xl text-primary dark:text-light" />
             ) : (
-              <BsSunFill className="text-2xl text-dark dark:text-light" />
+              <BsSunFill className="text-2xl text-primary dark:text-light" />
             )}
           </motion.button>
         </nav>
@@ -89,7 +89,7 @@ export default function NavBar() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.1 }}
         >
-          <nav className="flex flex-col items-center justify-center text-light dark:text-dark">
+          <nav className="flex flex-col items-center justify-center text-light dark:text-primary">
             <MobileCustomLink
               href="/"
               title="Home"

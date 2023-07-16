@@ -9,7 +9,7 @@ export default function Logo() {
     <div className="mt-2 flex items-center justify-center">
       <MotionLink
         href={"/"}
-        className="flex h-16 w-16 items-center justify-center rounded-xl bg-dark text-2xl font-bold text-light dark:text-light"
+        className="flex h-16 w-16 items-center justify-center rounded-full bg-dark text-2xl font-bold text-light dark:text-light"
         whileHover={{
           backgroundColor: [
             "#121212",
@@ -19,9 +19,11 @@ export default function Logo() {
             "rgba(154, 219, 41, 0.8)",
             "#121212",
           ],
-          transition: { duration: 1, repeat: Infinity },
+          rotate: 360,
+          transition: { duration: 1 },
           scale: 1.2,
         }}
+        whileTap={{ scale: 0.9 }}
       >
         <div className="flex flex-col items-center justify-center">
           AG
