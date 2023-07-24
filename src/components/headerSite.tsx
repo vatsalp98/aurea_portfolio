@@ -3,7 +3,8 @@ import Link from "next/link";
 import Logo from "./logo";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
+import IoHome from "react-icons/io";
 import { MobileCustomLink } from "./mobileCustomLinks";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import DesktopSocials from "./socialIcons";
@@ -55,7 +56,7 @@ export default function NavBar() {
 
       <div className="flex w-full items-center justify-between lg:hidden">
         <nav>
-          <CustomLink href="/" title="Home" className="mr-4" />
+          <CustomLink href="/" title={"Home"} className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
           <CustomLink href="/projects" title="Projects" className="mx-4" />
           <CustomLink href="/experience" title="Experience" className="ml-4" />

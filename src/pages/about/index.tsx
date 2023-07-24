@@ -5,7 +5,7 @@ import { AiOutlineLoading } from "react-icons/ai";
 import Footer from "~/components/footer";
 import HeadMeta from "~/components/headMeta";
 import NavBar from "~/components/headerSite";
-import { Education } from "~/components/types";
+import type { Education } from "~/components/types";
 import { api } from "~/utils/api";
 
 export default function ProjectsPage() {
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-gradStart to-gradEnd dark:from-gradDarkStart dark:to-gradDarkEnd">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            <span className="text-primary">About Me</span>
+            <span className="text-dark dark:text-white">About Me</span>
           </h1>
           {isLoading && (
             <motion.div
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
                   key={item.$id}
                   className="w-[900px] rounded-xl shadow-primary"
                 >
-                  <div className="flex rounded-xl border-primary bg-transparent px-8 py-16">
+                  <div className="flex rounded-xl border-primary bg-white px-8 py-16">
                     <div className="ml-5 flex flex-col">
                       <span className="mb-2 text-3xl font-bold">
                         {item.degree_name}
