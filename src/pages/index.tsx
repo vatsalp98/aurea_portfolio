@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Footer from "~/components/footer";
+import FullLogo from "~/components/full_logo";
 import HeadMeta from "~/components/headMeta";
 import NavBar from "~/components/headerSite";
 import { Specialists } from "~/components/typing/specialists";
@@ -26,15 +26,7 @@ export default function Home() {
           <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
             <div className="flex w-full items-center justify-between lg:flex-col">
               <div className="w-1/2 pr-10 md:w-full">
-                <Image
-                  src="/projects.svg"
-                  alt="Profile Picture"
-                  width={550}
-                  height={550}
-                  className="h-auto w-full lg:hidden md:inline-block md:w-full"
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 50vw"
-                />
+                <FullLogo strokeColor="#5F0A87" />
               </div>
               <div className="flex w-1/2 flex-col items-center self-center pl-10 lg:w-full lg:text-center">
                 <div

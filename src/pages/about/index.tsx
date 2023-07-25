@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 import { AiOutlineLoading } from "react-icons/ai";
 import Footer from "~/components/footer";
+import FullLogo from "~/components/full_logo";
 import HeadMeta from "~/components/headMeta";
 import NavBar from "~/components/headerSite";
 import type { Education } from "~/components/types";
 import { api } from "~/utils/api";
 
-export default function ProjectsPage() {
+export default function AboutPage() {
   const { data, isLoading } = api.example.getEducations.useQuery();
 
   return (
@@ -20,9 +19,10 @@ export default function ProjectsPage() {
       <NavBar />
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-gradStart to-gradEnd dark:from-gradDarkStart dark:to-gradDarkEnd">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            <span className="text-dark dark:text-white">About Me</span>
-          </h1>
+          <span className="mr-20 text-dark dark:text-white">
+            <FullLogo strokeColor="#5F0A87" />
+          </span>
+
           {isLoading && (
             <motion.div
               whileInView={{

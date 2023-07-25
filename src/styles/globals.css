@@ -1,6 +1,6 @@
 :root {
   --primary: transparent;
-  --secondary: #009688;
+  --secondary: #5f0a87;
 }
 
 @tailwind base;
